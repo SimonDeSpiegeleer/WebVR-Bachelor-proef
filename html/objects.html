@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objects</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<p><a href="index.html">Ga terug</a></p>
+
+<p>Het is ook mogelijk objecten in te laden via A-Frame, hier wordt het interessant
+    voor v-commerce</p>
+
+
+<a-scene class="embedded" embedded>
+    <a-assets>
+        <a-asset-item id="vans-obj" src="../files/vans/vans.obj"></a-asset-item>
+        <a-asset-item id="vans-mtl" src="../files/vans/vans.mtl"></a-asset-item>
+    </a-assets>
+    <a-obj-model position="0 0 -5" src="#vans-obj" mtl="#vans-mtl" scale="0.02 0.02 0.02"></a-obj-model>
+
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+</a-scene>
+
+</body>
+</html>

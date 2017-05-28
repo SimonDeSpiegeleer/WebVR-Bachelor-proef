@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<p><a href="index.html">Ga terug</a></p>
+
+<p>Vervolgens kunnen objecten ook bewegen via animaties, bijvoorbeeld roteren, om een object van alle kanten te laten bekijken</p>
+
+<a-scene class="embedded" embedded>
+    <a-assets>
+        <a-asset-item id="vans-obj" src="../files/vans/vans.obj"></a-asset-item>
+        <a-asset-item id="vans-mtl" src="../files/vans/vans.mtl"></a-asset-item>
+    </a-assets>
+    <a-entity>
+    <a-obj-model position="0 5 0" src="#vans-obj" mtl="#vans-mtl" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-animation attribute="rotation"
+                    dur="10000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"></a-animation>
+    </a-entity>
+    <a-entity position="0 4 5">
+        <a-camera></a-camera>
+    </a-entity>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+</a-scene>
+
+</body>
+</html>

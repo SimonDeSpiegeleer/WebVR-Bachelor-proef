@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>room</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<p><a href="index.html">Ga terug</a></p>
+
+<p>Een kamer kan ook weergegeven worden</p>
+
+
+<a-scene class="embedded" embedded>
+    <a-assets>
+        <a-asset-item id="room-obj" src="../files/room/room.obj"></a-asset-item>
+        <a-asset-item id="room-mtl" src="../files/room/room.mtl"></a-asset-item>
+    </a-assets>
+    <a-obj-model position="0 0 -5" src="#room-obj" mtl="#room-mtl" scale="0.03 0.03 0.03"></a-obj-model>
+
+    <a-sky color="#ECECEC"></a-sky>
+</a-scene>
+
+</body>
+</html>

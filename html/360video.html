@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360 video</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<p><a href="index.html">Ga terug</a></p>
+
+<p>360 graden video's zijn ook mogelijk</p>
+
+<a-scene class="embedded" embedded>
+    <a-assets>
+        <video id="video" src="../video/city.mp4"
+               autoplay loop crossorigin></video>
+    </a-assets>
+
+    <a-camera position='0 0 5'>
+        <a-cursor id='cursor' color='yellow'></a-cursor>
+    </a-camera>
+
+    <a-videosphere src="#video" rotation="0 180 0"></a-videosphere>
+    <a-entity video-controls='src:#video'></a-entity>
+</a-scene>
+
+</body>
+</html>
